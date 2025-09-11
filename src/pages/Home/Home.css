@@ -1,0 +1,54 @@
+.main-content {
+  padding-top: 140px; /* Space for fixed navbar */
+}
+
+.section {
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: white;
+}
+
+.section.duyurular {
+  background-image: url('/Banner.png') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.section.duyurular::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/Banner.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.section h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  background: none;
+}
+
+.section p {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 600px;
+  line-height: 1.6;
+  background: none;
+}

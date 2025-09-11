@@ -1,0 +1,251 @@
+.hakkimizda-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    width: 100%;
+}
+
+.hakkimizda-container h1{
+    font-size: 3rem;
+    position: relative;
+    top: 0%;
+    color: #4285f4;
+    background: none;
+}
+
+.hakkimizda-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.hakkimizda-page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.hakkimizda-page:hover {
+    transform: scale(1.02);
+}
+
+/* Page transition animations */
+.hakkimizda-page.entering {
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+.hakkimizda-page.entered {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.hakkimizda-page.exiting {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.hakkimizda-content{
+    display: flex;
+    text-align: left;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10rem;
+    height: 100%;
+    width: 100%;
+}
+
+.hakkimizda-content p{
+    font-size: 1.5rem;
+    color: black;
+}
+
+.hakkimizda-content h2 {
+    font-size: 2rem;
+    color: black;
+}
+
+.hakkimizda-content h3 {
+    font-size: 1.8rem;
+    color: black;
+}
+
+.hakkimizda-content h3:contains("Amaçlarımız") {
+    color: #34A853;
+    font-weight: bold;
+}
+
+/* Alternative approach for "Amaçlarımız" heading */
+.hakkimizda-content .body-section h3 {
+    color: #34A853;
+    font-weight: bold;
+}
+
+.hakkimizda-content li {
+    font-size: 1.4rem;
+    text-align: left;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: black;
+    margin-left: 0;
+    padding-left: 0;
+    list-style-position: outside;
+}
+
+.hakkimizda-content img{
+    margin-left: 2rem;
+    margin-right: 0rem;
+    width: 40rem;
+    height: 40rem;
+    border-style:hidden;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease-in-out;
+}
+
+.hakkimizda-content img:hover{
+    transform: scale(1.1);
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    color: black;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    position: absolute;
+    z-index: 10;
+}
+
+.nav-button.prev-button {
+    left: 20px;
+}
+
+.nav-button.next-button {
+    right: 20px;
+}
+
+.nav-button:hover {
+    background: #0056b3;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+    color: white;
+}
+
+.nav-button:active {
+    transform: scale(0.95);
+}
+
+.hakkimizda-indicators {
+    position: relative;
+    bottom: 0;
+    background: none;
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.indicator {
+    font-size: 1.5rem;
+    color: #ccc;
+    cursor: pointer;
+    background: none;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.indicator:hover {
+    color: #007bff;
+    transform: scale(1.2);
+}
+
+.indicator.active {
+    color: #007bff;
+    transform: scale(1.3);
+}
+
+/* Google Colors for GDGC text */
+.google-colored-gdgc {
+    background: linear-gradient(90deg, 
+        #4285F4 0%,    /* G - Blue */
+        #EA4335 25%,   /* D - Red */
+        #FBBC05 50%,   /* G - Yellow */
+        #34A853 75%    /* C - Green */
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: bold;
+}
+
+/* Individual letter colors for GDGC */
+.g-letter-blue {
+    color: #4285F4;
+    font-weight: bold;
+}
+
+.d-letter-red {
+    color: #EA4335;
+    font-weight: bold;
+}
+
+.g-letter-yellow {
+    color: #FBBC05;
+    font-weight: bold;
+}
+
+.c-letter-green {
+    color: #34A853;
+    font-weight: bold;
+}
+.core-team-content{
+  display: flex;
+  flex-direction: row;
+  height: 90%;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+}
+.core-team-content .text-section{
+  width: 50%;
+  height: 100%;
+}
+.core-team-content .text-section .body-section{
+  width: 100%;
+  height: 100%;
+}
+.core-team-content .text-section .body-section ul li{
+  font-size: 1.5rem;
+  text-align: left;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 0;
+  padding-left: 0;
+}
+.core-team-content .image-section{
+  width: 50%;
+  height: auto;
+}
+.core-team-content .image-section img{
+  width: 100%;
+  height: auto;
+}
