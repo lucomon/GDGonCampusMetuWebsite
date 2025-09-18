@@ -10,7 +10,9 @@ const App = () => {
   useEffect(() => {
     // URL'den sayfa belirle
     const path = window.location.pathname
-    if (path === '/menu') {
+    console.log('Current path:', path)
+    
+    if (path === '/menu' || path.endsWith('/menu')) {
       setCurrentPage('menu')
     } else {
       setCurrentPage('home')
