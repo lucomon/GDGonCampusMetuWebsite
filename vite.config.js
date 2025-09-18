@@ -7,8 +7,11 @@ export default defineConfig({
   server: {
     historyApiFallback: true
   },
-  base: '/GDGC/',
   build: {
-    outDir: 'dist'
+    rollupOptions: {
+      output: {
+        manualChunks: undefined
+      }
+    }
   }
 })
