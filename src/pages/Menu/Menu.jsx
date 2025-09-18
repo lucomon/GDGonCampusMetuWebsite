@@ -2,13 +2,18 @@ import React, { useEffect } from 'react'
 
 const Menu = () => {
   useEffect(() => {
+    console.log('Menu sayfası yüklendi')
+    
     // localStorage'dan kaydedilmiş URL'yi al, yoksa varsayılan URL'yi kullan
     const savedUrl = localStorage.getItem('qrRedirectUrl') || 'https://www.gdgoncampusmetu.com/'
     
+    console.log('Yönlendirilecek URL:', savedUrl)
+    
     // Kısa bir gecikme ile yönlendir (sayfa yüklenmesi için)
     const timer = setTimeout(() => {
+      console.log('Yönlendirme başlıyor...')
       window.location.href = savedUrl
-    }, 100)
+    }, 500)
 
     return () => clearTimeout(timer)
   }, [])
@@ -33,6 +38,9 @@ const Menu = () => {
       }}>
         <h2 style={{ color: '#333', marginBottom: '1rem' }}>Yönlendiriliyorsunuz...</h2>
         <p style={{ color: '#666', margin: 0 }}>Lütfen bekleyin, sayfa yönlendiriliyor.</p>
+        <p style={{ color: '#999', fontSize: '0.8rem', marginTop: '1rem' }}>
+          Eğer yönlendirilmiyorsanız, <a href="https://www.gdgoncampusmetu.com/" target="_blank" rel="noopener noreferrer">buraya tıklayın</a>
+        </p>
       </div>
     </div>
   )
