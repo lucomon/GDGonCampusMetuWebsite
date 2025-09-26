@@ -5,7 +5,7 @@ const Menu = () => {
     console.log('Menu sayfası yüklendi')
     
     // localStorage'dan kaydedilmiş URL'yi al, yoksa varsayılan URL'yi kullan
-    const savedUrl = localStorage.getItem('qrRedirectUrl') || 'https://www.gdgoncampusmetu.com/'
+    const savedUrl = localStorage.getItem('qrRedirectUrl') || 'https://chat.whatsapp.com/CLCsqyQsqDQKx0QfeBG2vy'
     
     console.log('Yönlendirilecek URL:', savedUrl)
     
